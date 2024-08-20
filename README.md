@@ -5,8 +5,8 @@ Content Security Policy (or CSP) generator using nonces.
 Currently does not work in combination with `{% js %}{% endjs %}` block code twig tags.
 
 ## Requirements
-
-- Craft 3.0.0
+- Craft 4.0.0 and up
+- PHP 8.0.2 and up
 
 ## Installation
 
