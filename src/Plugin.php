@@ -34,10 +34,10 @@ class Plugin extends CraftPlugin
             'headers' => HeadersService::class,
         ]);
 
-        if (!$this->isInstalled || !Craft::$app->getRequest()->getIsSiteRequest()) return;
-
         // Add in our Twig extensions
         Craft::$app->view->registerTwigExtension(new ContentSecurityPolicyTwigExtension());
+        
+        if (!$this->isInstalled || !Craft::$app->getRequest()->getIsSiteRequest()) return;
 
         // Defer most setup tasks until Craft is fully initialized
         Craft::$app->onInit(function() {
